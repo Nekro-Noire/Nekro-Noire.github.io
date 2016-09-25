@@ -5,7 +5,8 @@ function kaprekar() {
         i = 0,
         j = 0,
         aux = 0,
-        num = document.getElementById("numero").value;
+        num = document.getElementById("numero").value,
+        list = document.getElementById("lista");
     if (num >= 9999 || num < 1 || num === 1111 || num === 2222 || num === 3333 || num === 4444 || num === 5555 || num === 6666 || num === 7777 || num === 8888 || num === 6174) {
         alert("El algoritmo no se puede realizar. \n:'(");
     } else {
@@ -32,11 +33,19 @@ function kaprekar() {
                     }
                 }
             }
-            var mayor = '' + b[0] + '' + b[1] + '' + b[2] + '' + b[3];
+            var mayor = '' + b[0] + '' + b[1] + '' + b[2] + '' + b[3],
+                li = document.createElement("li");
             num = mayor - menor;
-            alert(mayor + ' - ' + menor + ' = ' + num);
+            li.innerHTML = mayor + ' - ' + menor + ' = ' + num;
+            li.classList.add('list-group-item');
+            li.classList.add('list-group-item-info');
             contador = contador + 1;
+            list.appendChild(li);
         }
-        alert('\n\nSe necesitaron ' + contador + ' iteraciones para encontrar la constante de Kaprekar');
+        li = document.createElement("li");
+        li.classList.add('list-group-item');
+        li.classList.add('list-group-item-danger');
+        li.innerHTML = '\n\nSe necesitaron ' + contador + ' iteraciones para encontrar la constante de Kaprekar';
+        list.appendChild(li);
     }
 }

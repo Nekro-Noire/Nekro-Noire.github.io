@@ -4,15 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Constante de Kaprekar</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div>
+    <div class="contenedor">
 
-        <form>
-            <input type="number" min="0" max="9999" placeholder="Número entre 0 y 9999" required id="numero">
-            <button onclick="kaprekar()">Calcular</button>
+        <form action="#" class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 form">
+            <div class="row">
+                <input type="number" min="0" max="9999" placeholder="Número entre 0 y 9999" required id="numero" class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 input-lg">
+            </div>
+            <center>
+                <button onclick="kaprekar()" class="btn btn-primary btn-lg">Calcular</button>
+            </center>
+            <ul class="list-group col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+                <center id="lista" ></center>
+            </ul>
         </form>
 
     </div>
