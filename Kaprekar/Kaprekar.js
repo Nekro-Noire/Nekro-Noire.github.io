@@ -1,3 +1,7 @@
+var x = 0,
+    hecho = [],
+    bandera = 0;
+
 function kaprekar() {
     'use strict';
 
@@ -5,10 +9,22 @@ function kaprekar() {
         i = 0,
         j = 0,
         aux = 0,
+        bandera2 = 0,
         num = document.getElementById("numero").value,
+        num2 = document.getElementById("numero").value,
         list = document.getElementById("lista");
-    if (num >= 9999 || num < 1 || num === 1111 || num === 2222 || num === 3333 || num === 4444 || num === 5555 || num === 6666 || num === 7777 || num === 8888 || num === 6174) {
-        alert("El algoritmo no se puede realizar. \n:'(");
+
+    hecho[x] = num2;
+
+    for (i = 0; i < x; i = i + 1) {
+        if (hecho[i] === num2 && bandera === 1 && bandera2 === 0) {
+            alert("Ya has usado éste múmero");
+            bandera2 = 1;
+        }
+    }
+
+    if (num >= 9999 || num < 1 || num === 1111 || num === 2222 || num === 3333 || num === 4444 || num === 5555 || num === 6666 || num === 7777 || num === 8888 || num === 6174 || num % 1 !== 0 || bandera2 !== 0) {
+        alert("El algoritmo no se puede realizar. \nUwU");
     } else {
         while (num !== 6174) {
             var a = [parseInt(num / 1000), parseInt(num % 1000 / 100), parseInt(num % 1000 % 100 / 10), parseInt(num % 1000 % 100 % 10)],
@@ -48,4 +64,6 @@ function kaprekar() {
         li.innerHTML = '\n\nSe necesitaron ' + contador + ' iteraciones para encontrar la constante de Kaprekar';
         list.appendChild(li);
     }
+    x = x + 1;
+    bandera = 1;
 }
