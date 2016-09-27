@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Constante de Kaprekar</title>
+    <title>Encriptación de Mensajes</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="../Bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="../Bootstrap/style.css">
@@ -11,22 +11,19 @@
 
 <body>
     <div class="contenedor">
-
-       <div class="centro col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+        <div class="centro col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
             <div class="row">
-                <input type="number" min="0" max="9999" placeholder="Número entre 0 y 9999" required id="numero" class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 input-lg">
+                <input type="text" placeholder="Introduce un mensaje:" required id="mensaje" class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 input-lg">
             </div>
             <center>
-                <button onclick="kaprekar()" class="btn btn-primary btn-lg">Calcular</button>
+                <button onclick="encriptar()" class="btn btn-primary btn-lg">Cifrar</button>
             </center>
             <ul class="list-group col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
-                <center id="lista" ></center>
+                <center id="encriptacion"></center>
             </ul>
         </div>
-
     </div>
-
-    <script src="Kaprekar.js"></script>
+    <script src="encirptacion.js"></script>
 </body>
 
 </html>
